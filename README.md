@@ -1,4 +1,17 @@
 # My site name
+## Important links:
+1. Client side private repo link [click here](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-hasibulislam999)
+2. Server side private repo link [click here]()
+3. Live site link [click here]()
+4. Admin login credentials:
+    * Email
+    ```bash
+    hasib143sl@gmail.com
+    ```
+    * password
+    ```bash
+    secretPassword123456
+    ```
 ## Technologies used here:
 * install and use firebase
 ```bash
