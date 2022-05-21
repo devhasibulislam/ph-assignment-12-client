@@ -1,12 +1,14 @@
 import React from 'react';
-import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../../shared/Loading';
 
 const Reset = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [user] = useAuthState(auth);
 
     const [
         sendPasswordResetEmail,
@@ -14,8 +16,14 @@ const Reset = () => {
         error
     ] = useSendPasswordResetEmail(auth);
 
+    const navigate = useNavigate();
+
     if (sending) {
         return <Loading />
+    }
+
+    if (user) {
+        navigate('/home');
     }
 
     const onSubmit = async (data) => {

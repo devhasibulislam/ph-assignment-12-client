@@ -1,9 +1,10 @@
 # My site name
 ## Important links:
 1. Client side private repo link [click here](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-hasibulislam999)
-2. Server side private repo link [click here]()
-3. Live site link [click here]()
-4. Admin login credentials:
+2. Server side private repo link [click here](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-hasibulislam999)
+3. Live client site link [click here](https://manufacturer-website-c4f0d.web.app/)
+4. Live server site link [click here](https://mighty-taiga-34747.herokuapp.com/)
+5. Admin login credentials:
     * Email
     ```bash
     hasib143sl@gmail.com
@@ -37,4 +38,8 @@ npm install react-hook-form
 * use daisy ui framework
 ```bash
 npm i daisyui
+```
+* get easy access at firebase using firebase hooks
+```bash
+npm install --save react-firebase-hooks
 ```

@@ -1,12 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../../shared/Loading';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [user] = useAuthState(auth);
 
     const [
         signInWithEmailAndPassword,
@@ -23,8 +24,7 @@ const Login = () => {
         return <Loading />
     }
 
-    if (userEP) {
-        console.log(userEP);
+    if (userEP || user) {
         navigate(from, { replace: true });
     }
 

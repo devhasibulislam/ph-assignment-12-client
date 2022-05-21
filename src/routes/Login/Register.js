@@ -62,7 +62,7 @@ const Register = () => {
                 };
 
                 // store in our db
-                const urlUsr = `https://rocky-cove-58715.herokuapp.com/user`;
+                const urlUsr = `http://localhost:5000/user`;
                 const postUser = async () => {
                     const request = await fetch(urlUsr, {
                         method: "POST",
@@ -72,7 +72,7 @@ const Register = () => {
                         body: JSON.stringify(user)
                     });
                     const response = await request.json();
-                    if (response.insertedId) {
+                    if (response?.acknowledged) {
                         toast.success(`register for ${name} done!`);
                         await createUserWithEmailAndPassword(email, password);
                         await updateProfile({ displayName: name, photoURL: avatar });
