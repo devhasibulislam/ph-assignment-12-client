@@ -8,6 +8,7 @@ import Home from './routes/Home/Home';
 import Login from './routes/Login/Login';
 import Register from './routes/Login/Register';
 import Reset from './routes/Login/Reset';
+import Blog from './routes/Blog/Blog';
 
 function App() {
   return (
@@ -27,6 +28,14 @@ function App() {
           element={
             <RequireAuth>
               <Home />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path='/blog'
+          element={
+            <RequireAuth>
+              <Blog />
             </RequireAuth>
           }
         />

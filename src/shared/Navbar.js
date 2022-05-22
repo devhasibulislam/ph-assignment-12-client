@@ -8,7 +8,8 @@ import Loading from './Loading';
 const Navbar = () => {
     const [user, loading] = useAuthState(auth);
     const menu = <>
-        <li><CustomLink to={'/'}>Home</CustomLink></li>
+        <li><CustomLink to={'/home'}>Home</CustomLink></li>
+        <li><CustomLink to={'/blog'}>Blog</CustomLink></li>
         <li>
             {
                 user

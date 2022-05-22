@@ -43,3 +43,10 @@ npm i daisyui
 ```bash
 npm install --save react-firebase-hooks
 ```
+* for better and optimised fetching using and install axios
+```bash
+npm i axios
+```
+
+### Hammer tools set:
+**To know more** [click here](https://housegrail.com/types-of-hammers/)
