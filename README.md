@@ -51,6 +51,7 @@ npm i axios
 ```bash
 npm i react-simple-typewriter
 ```
-
-### Hammer tools set:
-**To know more** [click here](https://housegrail.com/types-of-hammers/)
+* for image slider/carousel using react slider
+```bash
+npm i react-responsive-carousel
+```

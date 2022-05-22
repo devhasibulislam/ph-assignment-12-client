@@ -1,6 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import CustomLink from '../components/CustomLink';
 import auth from '../firebase.init';
 import Loading from './Loading';
@@ -43,7 +44,8 @@ const Navbar = () => {
                             {menu}
                         </ul>
                     </div>
-                    <a href='/' className="btn btn-ghost normal-case text-xl">Assignment 12</a>
+                    {/* <a href='/' className="btn btn-ghost normal-case text-xl">Assignment 12</a> */}
+                    <Link to={'/home'} className="btn btn-ghost normal-case text-xl">Assignment 12</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
