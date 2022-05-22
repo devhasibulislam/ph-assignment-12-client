@@ -47,6 +47,10 @@ npm install --save react-firebase-hooks
 ```bash
 npm i axios
 ```
+* for type writing animation using react type writter
+```bash
+npm i react-simple-typewriter
+```
 
 ### Hammer tools set:
 **To know more** [click here](https://housegrail.com/types-of-hammers/)

@@ -9,6 +9,7 @@ import Login from './routes/Login/Login';
 import Register from './routes/Login/Register';
 import Reset from './routes/Login/Reset';
 import Blogs from './routes/Blog/Blogs';
+import ErrorPage from './shared/ErrorPage/ErrorPage';
 
 function App() {
   return (
@@ -18,17 +19,13 @@ function App() {
         <Route
           path='/'
           element={
-            <RequireAuth>
-              <Home />
-            </RequireAuth>
+            <Home />
           }
         />
         <Route
           path='/home'
           element={
-            <RequireAuth>
-              <Home />
-            </RequireAuth>
+            <Home />
           }
         />
         <Route
@@ -50,6 +47,10 @@ function App() {
         <Route
           path='/reset'
           element={<Reset />}
+        />
+        <Route
+          path='*'
+          element={<ErrorPage />}
         />
       </Routes>
       <ToastContainer />

@@ -34,13 +34,13 @@ const Reset = () => {
     };
 
     return (
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2'>
+        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-1/2 md:w-1/2 w-full'>
             <h1 className='text-3xl text-center text-green-600'>Reset</h1>
             {(error) && <>
-                <div className="alert alert-error shadow-lg my-4">
+                <div className="alert alert-error shadow-lg my-4 w-1/2 mx-auto">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <span>{error.message}</span>
+                        <span>{error?.message}</span>
                     </div>
                 </div>
             </>}
