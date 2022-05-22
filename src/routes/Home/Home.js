@@ -1,9 +1,16 @@
 import React from 'react';
+import Banner from './Banner';
+import Reviews from './Reviews';
+import Summary from './Summary';
+import Tools from './Tools';
 
 const Home = () => {
     return (
         <div>
-            <h2>This is Home route</h2>
+            <Banner />
+            <Tools />
+            <Summary />
+            <Reviews />
         </div>
     );
 };
