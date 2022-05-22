@@ -1,0 +1,42 @@
+[
+    {
+        "reviewerName": "Elizabeth Olsen",
+        "reviewerAvatar": "https://i.ibb.co/r7ZHzX1/elizabeth-olsen.jpg",
+        "reviewerSpeech": "Arthropathy following intestinal bypass, multiple sites"
+    },
+    {
+        "reviewerName": "Ozge Yagiz",
+        "reviewerAvatar": "https://i.ibb.co/hLC8k2x/ozge-yagiz1.jpg",
+        "reviewerSpeech": "Degeneration of chamber angle, unspecified eye"
+    },
+    {
+        "reviewerName": "Jessica Lucas",
+        "reviewerAvatar": "https://i.ibb.co/zVZJc0k/Jessica-Lucas.jpg",
+        "reviewerSpeech": "Contusion of left hand"
+    },
+    {
+        "reviewerName": "Nancy Momoland",
+        "reviewerAvatar": "https://i.ibb.co/9sMQcfS/nancy-momoland.jpg",
+        "reviewerSpeech": "Contusion of left middle finger without damage to nail, initial encounter"
+    },
+    {
+        "reviewerName": "Hande Ercel",
+        "reviewerAvatar": "https://i.ibb.co/VpwsDX8/hande-ercel-02.jpg",
+        "reviewerSpeech": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
+    },
+    {
+        "reviewerName": "Jessica Locus",
+        "reviewerAvatar": "https://i.ibb.co/R3gjdJc/jessica-locus.jpg",
+        "reviewerSpeech": "Stress fracture, unspecified foot, subsequent encounter for fracture with delayed healing"
+    },
+    {
+        "reviewerName": "Scarlet Johanson",
+        "reviewerAvatar": "https://i.ibb.co/hCbSS4S/scarlet-johanson.jpg",
+        "reviewerSpeech": "Passenger of dune buggy injured in traffic accident, sequela"
+    },
+    {
+        "reviewerName": "Katherine Langford",
+        "reviewerAvatar": "https://i.ibb.co/McYsqtz/Katherine-Langford.jpg",
+        "reviewerSpeech": "Passenger in pick-up truck or van injured in collision with pedal cycle in nontraffic accident"
+    }
+]
