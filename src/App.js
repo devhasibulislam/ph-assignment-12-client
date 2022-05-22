@@ -8,7 +8,7 @@ import Home from './routes/Home/Home';
 import Login from './routes/Login/Login';
 import Register from './routes/Login/Register';
 import Reset from './routes/Login/Reset';
-import Blog from './routes/Blog/Blog';
+import Blogs from './routes/Blog/Blogs';
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
           path='/blog'
           element={
             <RequireAuth>
-              <Blog />
+              <Blogs />
             </RequireAuth>
           }
         />

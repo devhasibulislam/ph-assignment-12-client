@@ -1,15 +1,15 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-const Blog = () => {
-    const [blogs, setBlogs] = useState([]);
-    useEffect(() => {
-        axios.get('services')
-            .then(res => console.log(res))
-    }, []);
+const Blog = ({ index, blog }) => {
+    const { question, answer } = blog
     return (
-        <div>
-            <h2>This is Blog route</h2>
+        <div tabIndex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+            <div className="collapse-title text-xl font-medium">
+                <span className='text-green-600'>{index + 1}</span>. {question}
+            </div>
+            <div className="collapse-content">
+                <p>{answer}</p>
+            </div>
         </div>
     );
 };
