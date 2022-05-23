@@ -12,9 +12,6 @@ const Purchase = () => {
     const [validateQTY, setValidateQTY] = useState(0);
     const [visibleBtn, setVisibleBtn] = useState(true);
 
-    const smallDevice = 'h-screen grid grid-cols-1 justify-center items-center';
-    const largeDevice = 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-1/2'
-
     const { data: product } = useQuery('product', () => fetch(`http://localhost:5000/product/${id}`).then(res => res.json()))
 
     const checkValidQTY = (event) => {
@@ -88,7 +85,7 @@ const Purchase = () => {
                         </div>
                         <p><i className="fa fa-cart-arrow-down mr-1" aria-hidden="true"></i><span className='text-2xl text-secondary'>{prod?.toolAvailableQuantity}</span></p>
                         <p className='flex flex-row items-baseline'><i className="fa fa-usd mr-1" aria-hidden="true"></i><span className='text-2xl text-primary'>{prod?.toolPrice}</span>(for each)</p>
-                        <hr className='mb-2' />
+                        <hr className='mb-2 lg:w-1/2' />
                         <form onSubmit={(event) => handlePurchaseOrder({ prod }, event)}>
                             <div className="form-control">
                                 <label className="input-group input-group-sm">

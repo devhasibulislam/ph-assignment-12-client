@@ -10,6 +10,11 @@ const Navbar = () => {
     const [user, loading] = useAuthState(auth);
     const menu = <>
         <li><CustomLink to={'/home'}>Home</CustomLink></li>
+        <li>
+            {
+                user && <CustomLink to={'/dashboard'}>Dashboard</CustomLink>
+            }
+        </li>
         <li><CustomLink to={'/blog'}>Blog</CustomLink></li>
         <li>
             {
@@ -51,6 +56,11 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal p-0">
                         {menu}
                     </ul>
+                </div>
+                <div className="navbar-end lg:hidden">
+                    <label htmlFor="dashboard-drawer" tabIndex="1" className="btn btn-ghost lg:hidden">
+                        <i className="fa fa-tachometer text-xl" aria-hidden="true"></i>
+                    </label>
                 </div>
             </div>
         </div>
