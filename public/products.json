@@ -3,80 +3,80 @@
         "toolName": "Dead blow hammer",
         "toolImage": "https://i.ibb.co/kQqxztz/dead-blow-hammer.webp",
         "toolDescription": "Malignant neoplasm of parietal pleura",
-        "toolOrderQuantity": 15041,
-        "toolAvailableQuantity": 14577,
-        "toolPrice": 400213.051272
+        "toolOrderQuantity": 176,
+        "toolAvailableQuantity": 25672,
+        "toolPrice": 284
     },
     {
         "toolName": "Electricians hammer",
         "toolImage": "https://i.ibb.co/PMBX460/electretians-hammer.webp",
         "toolDescription": "Alcoholism in family",
-        "toolOrderQuantity": 40012,
-        "toolAvailableQuantity": 35734,
-        "toolPrice": 80892.781789
+        "toolOrderQuantity": 136,
+        "toolAvailableQuantity": 18931,
+        "toolPrice": 285
     },
     {
         "toolName": "Farming hammer",
         "toolImage": "https://i.ibb.co/VDkDLk5/farming-hammer.webp",
         "toolDescription": "Pulmonary tuberculosis, unspecified, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically",
-        "toolOrderQuantity": 11433,
-        "toolAvailableQuantity": 46492,
-        "toolPrice": 350080.452322
+        "toolOrderQuantity": 156,
+        "toolAvailableQuantity": 26614,
+        "toolPrice": 281
     },
     {
         "toolName": "Rubber mallet hammer",
         "toolImage": "https://i.ibb.co/yqGqFDF/rubber-mallet-hammer.webp",
         "toolDescription": "Carcinoma in situ of lip, oral cavity, and pharynx",
-        "toolOrderQuantity": 12611,
-        "toolAvailableQuantity": 22957,
-        "toolPrice": 391258.235425
+        "toolOrderQuantity": 230,
+        "toolAvailableQuantity": 26449,
+        "toolPrice": 281
     },
     {
         "toolName": "Sledge hammer",
         "toolImage": "https://i.ibb.co/p3tprXN/sledge-hammer.webp",
         "toolDescription": "Contraceptive surveillance, unspecified",
-        "toolOrderQuantity": 13112,
-        "toolAvailableQuantity": 31154,
-        "toolPrice": 277957.963331
+        "toolOrderQuantity": 141,
+        "toolAvailableQuantity": 21939,
+        "toolPrice": 226
     },
     {
         "toolName": "Tack hammer",
         "toolImage": "https://i.ibb.co/jgyJJmS/tack-hammer.webp",
         "toolDescription": "Malignant neoplasm of cerebellum nos",
-        "toolOrderQuantity": 38222,
-        "toolAvailableQuantity": 16153,
-        "toolPrice": 415706.503799
+        "toolOrderQuantity": 103,
+        "toolAvailableQuantity": 22914,
+        "toolPrice": 269
     },
     {
         "toolName": "Ball pen hammer",
         "toolImage": "https://i.ibb.co/ykPKKcc/ball-pen-hammer.webp",
         "toolDescription": "Unspecified mechanical complication of internal orthopedic device, implant, and graft",
-        "toolOrderQuantity": 39623,
-        "toolAvailableQuantity": 41024,
-        "toolPrice": 157947.502462
+        "toolOrderQuantity": 242,
+        "toolAvailableQuantity": 22091,
+        "toolPrice": 274
     },
     {
         "toolName": "Blacksmith hammer",
         "toolImage": "https://i.ibb.co/TRQCRBg/blacksmith-hammer.webp",
         "toolDescription": "Mild or unspecified pre-eclampsia, delivered, with or without mention of antepartum condition",
-        "toolOrderQuantity": 18101,
-        "toolAvailableQuantity": 27444,
-        "toolPrice": 373226.954006
+        "toolOrderQuantity": 111,
+        "toolAvailableQuantity": 29284,
+        "toolPrice": 219
     },
     {
         "toolName": "Claw hammer",
         "toolImage": "https://i.ibb.co/HC8Xcbb/claw-hammer.webp",
         "toolDescription": "Intrinsic asthma with status asthmaticus",
-        "toolOrderQuantity": 49608,
-        "toolAvailableQuantity": 29781,
-        "toolPrice": 292972.493589
+        "toolOrderQuantity": 195,
+        "toolAvailableQuantity": 21471,
+        "toolPrice": 274
     },
     {
         "toolName": "Club hammer",
         "toolImage": "https://i.ibb.co/X5DLhsB/club-hammer.webp",
         "toolDescription": "External hemorrhoids without mention of complication",
-        "toolOrderQuantity": 43213,
-        "toolAvailableQuantity": 20998,
-        "toolPrice": 83648.798976
+        "toolOrderQuantity": 114,
+        "toolAvailableQuantity": 10462,
+        "toolPrice": 231
     }
 ]

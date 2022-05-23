@@ -9,21 +9,56 @@ const Summary = () => {
             <h1 className='flex items-baseline justify-center my-5 text-white'><i className="fa fa-hashtag text-6xl" aria-hidden="true"></i><span className='text-4xl'>Business Summary</span></h1>
             <div className="mockup-window border bg-base-300 container mx-auto">
                 <div className="flex lg:flex-row flex-col justify-center items-center lg:p-16 p-8 bg-base-200">
-                    <article className=' bg-black text-white p-4 mr-4 rounded-lg text-justify lg:w-1/2 w-full lg:ml-0 ml-auto'>
-                        Hammer is creating space for consumer audio products and fitness bands that are not only technologically advanced but also fashion forward. This brand Hammer founded by the <span className='font-bold'>Hasibul Islam</span> , January 2019. Hammer manufactures consumer audio products and fitness bands that are not only technologically advanced but also known for its Athleisurelook. Hammer believes in style and makes sure to deliver the best in quality and technologically advanced products for the Indian audience. Hammer products are stylish as well as high in performance, comfortable and durable, to suit the preference of all. Hammer’s product portfolio is a mix of audio accessories and wearables accessories. With truly wireless earphones (TWS) our main product category. Products have been designed to fulfil athleisure tastes which appeal to both fitness and fashion-conscious youth. This complete summary of the ideas from Michael Hammer's book "The Agenda" shows that consumers are now in the driving seat of the economy, and every successful business will assimilate this fact and act accordingly. In his book, the author explores nine critical items that should be on every manager’s agenda: they cover specific actions companies should do to differentiate themselves, effective organisation techniques, the best ways to relate to customers and how to use the internet as a successful harnessing tool. This summary is a must-read for every manager who wants to ensure their company has the most effective and profitable relationship with consumers.
-                    </article>
-                    <div className='lg:w-1/4 w-full'>
-                        <div className="h-96 carousel carousel-vertical rounded-box">
-                            {
-                                hammerPhotos.map(hammerPhoto => <div
-                                    key={hammerPhoto._id}
-                                    className="carousel-item h-full my-2"
-                                >
-                                    <img src={hammerPhoto?.toolImage} alt='business-summary' className='object-cover object-left-top' />
-                                </div>)
-                            }
+                    <section className="text-gray-600 body-font">
+                        <div className="container px-5 py-24 mx-auto">
+                            <div className="flex flex-col text-center w-full mb-20">
+                                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
+                                <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+                            </div>
+                            <div className="flex flex-wrap -m-4 text-center">
+                                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                                            <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                                            <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                                        </svg>
+                                        <h2 className="title-font font-medium text-3xl text-gray-900">2.7K</h2>
+                                        <p className="leading-relaxed">Downloads</p>
+                                    </div>
+                                </div>
+                                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                                        </svg>
+                                        <h2 className="title-font font-medium text-3xl text-gray-900">1.3K</h2>
+                                        <p className="leading-relaxed">Users</p>
+                                    </div>
+                                </div>
+                                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                                            <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                                            <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+                                        </svg>
+                                        <h2 className="title-font font-medium text-3xl text-gray-900">74+</h2>
+                                        <p className="leading-relaxed">Documentations</p>
+                                    </div>
+                                </div>
+                                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                                    <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        </svg>
+                                        <h2 className="title-font font-medium text-3xl text-gray-900">46+</h2>
+                                        <p className="leading-relaxed">Countries</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>

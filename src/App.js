@@ -9,7 +9,8 @@ import Login from './routes/Login/Login';
 import Register from './routes/Login/Register';
 import Reset from './routes/Login/Reset';
 import Blogs from './routes/Blog/Blogs';
-import ErrorPage from './shared/ErrorPage/ErrorPage';
+import ErrorPage from './routes/ErrorPage/ErrorPage';
+import Purchase from './shared/Purchase';
 
 function App() {
   return (
@@ -26,6 +27,12 @@ function App() {
           path='/home'
           element={
             <Home />
+          }
+        />
+        <Route
+          path='/purchase/:id'
+          element={
+            <Purchase />
           }
         />
         <Route
