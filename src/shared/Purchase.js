@@ -56,6 +56,7 @@ const Purchase = () => {
             const { data } = await axios.post(url, userProduct);
             if (data?.acknowledged) {
                 toast.success('Purchase order done!');
+                setVisibleBtn(true);
             }
         };
         postUserOrder();

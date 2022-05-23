@@ -1,15 +1,37 @@
-import React, { useState } from 'react';
-import { useQuery } from 'react-query';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+// import { useQuery } from 'react-query';
 import PurchaseCard from '../../components/PurchaseCard';
 import Spinner from '../../shared/Spinner';
 
 const Tools = () => {
     const [spinner, setSpinner] = useState(true);
 
-    const { data: products } = useQuery('products', () => fetch('http://localhost:5000/products').then(res => {
-        setSpinner(false);
-        return res.json()
-    }))
+    // const { data: products } = useQuery('products', () => fetch('http://localhost:5000/products').then(res => {
+    //     setSpinner(false);
+    //     return res.json()
+    // }))
+
+    const [totalProductCount, setTotalProductCount] = useState(0);
+    const [activePage, setActivePage] = useState(0);
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/products?pageNumber=${activePage}`)
+            .then(res => {
+                setProducts(res?.data);
+                setSpinner(false);
+            })
+    }, [activePage]);
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/productCount')
+            .then(res => {
+                const overallNumbers = res?.data?.count;
+                const defaultCount = Math.ceil(overallNumbers / 3);
+                setTotalProductCount(defaultCount);
+            })
+    }, []);
 
     return (
         <div className='lg:py-20 py-10 bg-base-200'>
@@ -20,11 +42,38 @@ const Tools = () => {
                 }
                 <div className='grid lg:grid-cols-2 grid-cols-1 gap-4'>
                     {
-                        products?.slice(0, 3).map(product => <PurchaseCard
+                        products?.map(product => <PurchaseCard
                             key={product?._id}
                             product={product}
                         />)
                     }
+                </div>
+
+                <div className="py-2">
+                    <nav className="block">
+                        <ul className="flex pl-0 rounded list-none flex-wrap justify-center">
+                            {
+                                [...Array(totalProductCount).keys()]
+                                    .map(
+                                        productsPageNumber => <li
+                                            key={productsPageNumber}
+                                        >
+                                            <span className={
+                                                productsPageNumber === activePage
+                                                    ?
+                                                    "first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-pink-500 text-white bg-pink-500 cursor-pointer"
+                                                    :
+                                                    "first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-pink-500 bg-white text-pink-500 cursor-pointer hover:scale-110 transition-all"
+                                            }
+                                                onClick={() => setActivePage(productsPageNumber)}
+                                            >
+                                                {productsPageNumber + 1}
+                                            </span>
+                                        </li>
+                                    )
+                            }
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
