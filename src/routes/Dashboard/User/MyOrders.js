@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../../shared/Loading';
 import OrderCancellation from './OrderCancellation';
 
 const MyOrders = () => {
     const [cancelOrder, setCancelOrder] = useState(null);
-    const { data: userOrders, refetch } = useQuery("userOrders", () => fetch("http://localhost:5000/userOrders").then(res => res.json()));
+    const { data: userOrders, isLoading, refetch } = useQuery("userOrders", () => fetch("http://localhost:5000/userOrders").then(res => res.json()));
     const navigate = useNavigate();
+
+    if (isLoading) {
+        return <Loading />
+    }
 
     return (
         <div>
@@ -34,9 +39,15 @@ const MyOrders = () => {
                                 <td><span className='mr-1'>$</span>{userOrder?.totalPrize}</td>
                                 <td>
                                     <label htmlFor="order-cancellation" className='btn btn-sm btn-outline btn-error mr-1' onClick={() => setCancelOrder(userOrder)}>Cancel</label>
-                                    <button className='btn btn-sm btn-outline btn-success ml-1'
-                                        onClick={()=> navigate(`/payment/${userOrder?._id}`)}
-                                    >Payment</button>
+                                    {
+                                        (userOrder?.totalPrize && !userOrder?.paid)
+                                        ?
+                                        <button className='btn btn-sm btn-outline btn-success ml-1'
+                                            onClick={() => navigate(`/dashboard/payment/${userOrder?._id}`)}
+                                            >Payment</button>
+                                            :
+                                            <span className='text-success ml-4'>Paid</span>
+                                    }
                                 </td>
                             </tr>)
                         }

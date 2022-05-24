@@ -20,6 +20,7 @@ import ManageOrders from './routes/Dashboard/Admin/ManageOrders';
 import ManageProducts from './routes/Dashboard/Admin/ManageProducts';
 import MyProfile from './components/MyProfile';
 import AllReview from './routes/Home/AllReview';
+import Payment from './routes/Dashboard/User/Payment';
 
 function App() {
   return (
@@ -64,6 +65,10 @@ function App() {
           <Route
             path='addingReview'
             element={<AddingReview />}
+          />
+          <Route
+            path='payment/:id'
+            element={<Payment />}
           />
 
           {/* admin segment */}
