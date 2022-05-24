@@ -1,42 +1,58 @@
 [
     {
         "reviewerName": "Elizabeth Olsen",
+        "reviewerEmail": "onlyboyrobin@gmail.com",
         "reviewerAvatar": "https://i.ibb.co/r7ZHzX1/elizabeth-olsen.jpg",
-        "reviewerSpeech": "Arthropathy following intestinal bypass, multiple sites"
+        "reviewerSpeech": "Arthropathy following intestinal bypass, multiple sites",
+        "ratings": 5
     },
     {
         "reviewerName": "Ozge Yagiz",
+        "reviewerEmail": "hyhameem@gmail.com",
         "reviewerAvatar": "https://i.ibb.co/hLC8k2x/ozge-yagiz1.jpg",
-        "reviewerSpeech": "Degeneration of chamber angle, unspecified eye"
+        "reviewerSpeech": "Degeneration of chamber angle, unspecified eye",
+        "ratings": 4
     },
     {
         "reviewerName": "Jessica Lucas",
+        "reviewerEmail": "cckk5544@gmail.com",
         "reviewerAvatar": "https://i.ibb.co/zVZJc0k/Jessica-Lucas.jpg",
-        "reviewerSpeech": "Contusion of left hand"
+        "reviewerSpeech": "Contusion of left hand",
+        "ratings": 3
     },
     {
         "reviewerName": "Nancy Momoland",
+        "reviewerEmail": "ffddfdccc@gmail.com",
         "reviewerAvatar": "https://i.ibb.co/9sMQcfS/nancy-momoland.jpg",
-        "reviewerSpeech": "Contusion of left middle finger without damage to nail, initial encounter"
+        "reviewerSpeech": "Contusion of left middle finger without damage to nail, initial encounter",
+        "ratings": 5
     },
     {
         "reviewerName": "Hande Ercel",
+        "reviewerEmail": "avatar@yahoo.com",
         "reviewerAvatar": "https://i.ibb.co/VpwsDX8/hande-ercel-02.jpg",
-        "reviewerSpeech": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
+        "reviewerSpeech": "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral",
+        "ratings": 4
     },
     {
         "reviewerName": "Jessica Locus",
+        "reviewerEmail": "gotham@outlook.com",
         "reviewerAvatar": "https://i.ibb.co/R3gjdJc/jessica-locus.jpg",
-        "reviewerSpeech": "Stress fracture, unspecified foot, subsequent encounter for fracture with delayed healing"
+        "reviewerSpeech": "Stress fracture, unspecified foot, subsequent encounter for fracture with delayed healing",
+        "ratings": 3
     },
     {
         "reviewerName": "Scarlet Johanson",
+        "reviewerEmail": "elon.musk@tesla.com",
         "reviewerAvatar": "https://i.ibb.co/hCbSS4S/scarlet-johanson.jpg",
-        "reviewerSpeech": "Passenger of dune buggy injured in traffic accident, sequela"
+        "reviewerSpeech": "Passenger of dune buggy injured in traffic accident, sequela",
+        "ratings": 5
     },
     {
         "reviewerName": "Katherine Langford",
+        "reviewerEmail": "kim.dotcom@mega.com",
         "reviewerAvatar": "https://i.ibb.co/McYsqtz/Katherine-Langford.jpg",
-        "reviewerSpeech": "Passenger in pick-up truck or van injured in collision with pedal cycle in nontraffic accident"
+        "reviewerSpeech": "Passenger in pick-up truck or van injured in collision with pedal cycle in nontraffic accident",
+        "ratings": 4
     }
 ]

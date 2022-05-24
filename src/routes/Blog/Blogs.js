@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
+import Footer from '../../shared/Footer';
 import Blog from './Blog';
 
 const Blogs = () => {
@@ -11,7 +12,7 @@ const Blogs = () => {
     }, []);
     return (
         <div className='mt-20 lg:mb-0 mb-20'>
-            <h1 className='text-center text-3xl'>Welcome to my 
+            <h1 className='text-center text-3xl'>Welcome to my
                 <span className='ml-1 text-green-600'>
                     <Typewriter
                         words={['blog']}
@@ -20,7 +21,7 @@ const Blogs = () => {
                         cursorStyle='_'
                         typeSpeed={70}
                         deleteSpeed={50}
-                        delaySpeed={1000} 
+                        delaySpeed={1000}
                     />
                 </span>
             </h1>
@@ -33,6 +34,10 @@ const Blogs = () => {
                         blog={blog}
                     />)
                 }
+            </div>
+
+            <div className='mt-8'>
+                <Footer />
             </div>
         </div>
     );

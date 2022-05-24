@@ -73,7 +73,13 @@ const Purchase = () => {
                     key={prod?._id}
                     className="card lg:card-side bg-base-100 shadow-xl"
                 >
-                    <figure><img src={prod?.toolImage} alt="product_image" className='w-40' /></figure>
+                    <figure>
+                        <img
+                            src={prod?.toolImage}
+                            alt="product_image"
+                            className='w-40 h-64 object-cover object-left-top'
+                        />
+                    </figure>
                     <div className="card-body">
                         <span className='bg-secondary w-fit text-white px-4 rounded-xl'><i className="fa fa-lightbulb-o mr-2" aria-hidden="true"></i>{prod?._id}</span>
                         <h2 className="card-title">{prod?.toolName}</h2>

@@ -1,12 +1,17 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import ReviewCard from '../../components/ReviewCard';
 import auth from '../../firebase.init';
 import useReviews from '../../hooks/useReviews';
-import ReviewCard from '../../shared/ReviewCard';
 
 const Reviews = () => {
     const [user] = useAuthState(auth);
     const [reviews] = useReviews();
+    const postVerse = reviews?.length;
+    const preVerse = postVerse - 3;
+    const navigate = useNavigate();
+    
     return (
         <div className='text-center lg:py-20 py-10 bg-base-200'>
             <h1 className='flex items-baseline justify-center my-5'><i className="fa fa-hashtag text-6xl" aria-hidden="true"></i><span className='text-4xl'>Reviews of products</span></h1>
@@ -47,11 +52,21 @@ const Reviews = () => {
             {/* review cards */}
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 container mx-auto gap-4 mt-12'>
                 {
-                    reviews?.slice(0, 3).map(review => <ReviewCard
+                    reviews?.slice(preVerse, postVerse).map(review => <ReviewCard
                         key={review?._id}
                         review={review}
                     />)
                 }
+            </div>
+            <div
+                className='mt-12'
+            >
+                <button
+                    className='btn btn-outline btn-info btn-xl'
+                    onClick={()=>navigate('/allReviews')}
+                >
+                    See all reviews
+                </button>
             </div>
         </div>
     );

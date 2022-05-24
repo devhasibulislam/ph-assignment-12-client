@@ -18,6 +18,8 @@ import AddProduct from './routes/Dashboard/Admin/AddProduct';
 import MakeAdmin from './routes/Dashboard/Admin/MakeAdmin';
 import ManageOrders from './routes/Dashboard/Admin/ManageOrders';
 import ManageProducts from './routes/Dashboard/Admin/ManageProducts';
+import MyProfile from './components/MyProfile';
+import AllReview from './routes/Home/AllReview';
 
 function App() {
   return (
@@ -82,6 +84,16 @@ function App() {
             element={<ManageProducts />}
           />
         </Route>
+
+        <Route
+          path='/myProfile'
+          element={<MyProfile />}
+        />
+
+        <Route
+          path='/allReviews'
+          element={<AllReview />}
+        />
 
         <Route
           path='/blog'

@@ -10,11 +10,12 @@ const Navbar = () => {
     const [user, loading] = useAuthState(auth);
     const menu = <>
         <li><CustomLink to={'/home'}>Home</CustomLink></li>
-        <li>
-            {
-                user && <CustomLink to={'/dashboard'}>Dashboard</CustomLink>
-            }
-        </li>
+        {
+            user && <li><CustomLink to={'/dashboard'}>Dashboard</CustomLink></li>
+        }
+        {
+            user && <li><CustomLink to={'/myProfile'}>My Profile</CustomLink></li>
+        }
         <li><CustomLink to={'/blog'}>Blog</CustomLink></li>
         <li>
             {
