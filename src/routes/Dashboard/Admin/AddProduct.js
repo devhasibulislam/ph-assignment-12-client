@@ -22,7 +22,7 @@ const AddProduct = () => {
                 body: formData
             });
             const response = await request.json();
-            console.log(response);
+            console.table(response);
             if (response?.success) {
                 const productInfo = {
                     toolName: data?.product,
@@ -36,7 +36,7 @@ const AddProduct = () => {
                 const postProductToDB = async () => {
                     const url = `http://localhost:5000/product`;
                     const { data } = await axios.post(url, productInfo);
-                    console.log(data);
+                    console.table(data);
                     toast.success('Product added successfully!')
                 };
                 postProductToDB();
@@ -45,7 +45,6 @@ const AddProduct = () => {
     };
     return (
         <div>
-            <h2>This is Add Product route</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='text-center'>
 

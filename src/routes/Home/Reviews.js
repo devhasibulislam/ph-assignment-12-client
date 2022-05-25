@@ -15,7 +15,7 @@ const Reviews = () => {
     return (
         <div className='text-center lg:py-20 py-10 bg-base-200'>
             <h1 className='flex items-baseline justify-center my-5'><i className="fa fa-hashtag text-6xl" aria-hidden="true"></i><span className='text-4xl'>Reviews of products</span></h1>
-            <div className="stats shadow">
+            <div className="stats shadow grid container mx-auto">
 
                 <div className="stat">
                     <div className="stat-figure text-primary">

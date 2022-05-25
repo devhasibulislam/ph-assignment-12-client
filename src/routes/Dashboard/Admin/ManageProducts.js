@@ -14,7 +14,7 @@ const ManageProducts = () => {
             const { data } = await axios.delete(url);
             toast.success('product deleted!');
             refetch();
-            console.log(data);
+            console.table(data);
         };
         deleteProduct();
     };
