@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 import ParticleAnimation from './ParticleAnimation';
+import ProfileUpdate from './ProfileUpdate';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
@@ -11,7 +12,7 @@ const MyProfile = () => {
     const navigate = useNavigate();
     return (
         <div>
-                <ParticleAnimation />
+            <ParticleAnimation />
             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-1/2 md:w-1/2 w-full bg-slate-300'>
                 <div className="flex items-center justify-center">
                     <div className="bg-white mt-10 rounded-t-lg lg:w-1/2 md:w-1/2 w-full">
@@ -22,6 +23,19 @@ const MyProfile = () => {
                                     <img src={user?.photoURL} alt='avatar' />
                                 </div>
                             </div>
+                            {/* modal */}
+                            <div className='mt-5'>
+                                <label for="profile_update" className="text-center mt-3 border-2 p-1 border-primary hover:bg-primary hover:text-white font-bold rounded-lg ease-in duration-300">Update Profile</label>
+                                <input type="checkbox" id="profile_update" className="modal-toggle" />
+                                <div className="modal">
+                                    <div className="modal-box relative">
+                                        <label for="profile_update" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                        <h3 className="text-lg font-bold">Update Profile!</h3>
+                                        <ProfileUpdate></ProfileUpdate>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* --------- */}
                             <h1 className="text-gray-800 font-semibold text-xl mt-5">{user?.displayName}</h1>
                             <h1 className="text-gray-500 text-sm">{user?.email}</h1>
                             <h1 className="text-gray-500 text-sm p-4 text-justify">

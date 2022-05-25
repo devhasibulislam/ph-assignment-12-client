@@ -21,6 +21,8 @@ import ManageProducts from './routes/Dashboard/Admin/ManageProducts';
 import MyProfile from './components/MyProfile';
 import AllReview from './routes/Home/AllReview';
 import Payment from './routes/Dashboard/User/Payment';
+import AllProducts from './routes/Dashboard/User/AllProducts';
+import Welcome from './routes/Dashboard/Welcome';
 
 function App() {
   return (
@@ -48,6 +50,11 @@ function App() {
           }
         />
 
+        <Route
+          path='/allProducts'
+          element={<AllProducts />}
+        />
+
         {/* nested route */}
         <Route
           path='/dashboard'
@@ -57,9 +64,19 @@ function App() {
             </RequireAuth>
           }
         >
-          {/* user segment */}
           <Route
             index
+            element={<Welcome />}
+          />
+
+          <Route
+            path='myProfile'
+            element={<MyProfile />}
+          />
+          
+          {/* user segment */}
+          <Route
+            path='myOrder'
             element={<MyOrders />}
           />
           <Route
