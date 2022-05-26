@@ -6,6 +6,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-fi
 import Loading from '../../shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
+import useToken from '../../hooks/useToken';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -29,6 +30,8 @@ const Register = () => {
         updating,
         errorUP
     ] = useUpdateProfile(auth);
+
+    const [token] = useToken(userG);
 
     const navigate = useNavigate();
 
@@ -62,28 +65,31 @@ const Register = () => {
                 const password = data?.password;
                 const avatar = response?.data?.url;
 
-                const user = {
+                const currentUser = {
                     name: name,
                     email: email,
                     avatar: avatar
                 };
 
                 // store in our db
-                const urlUsr = `http://localhost:5000/user`;
+                const urlUsr = `http://localhost:5000/userAdd/${email}`;
                 const postUser = async () => {
                     const request = await fetch(urlUsr, {
-                        method: "POST",
+                        method: "PUT",
                         headers: {
                             'content-type': 'application/json',
                         },
-                        body: JSON.stringify(user)
+                        body: JSON.stringify(currentUser)
                     });
                     const response = await request.json();
-                    if (response?.acknowledged) {
-                        toast.success(`register for ${name} done!`);
+                    // console.log(response);
+                    if (response?.result?.acknowledged) {
                         // sign in with email and password
                         await createUserWithEmailAndPassword(email, password);
                         await updateProfile({ displayName: name, photoURL: avatar });
+                        const accessToken = response?.token;
+                        localStorage.setItem('accessToken', accessToken);
+                        toast.success(`register for ${name} done!`);
                     }
                 }; postUser();
             }

@@ -20,6 +20,7 @@ const Navbar = () => {
                     ?
                     <CustomLink to="/login" className="py-2 pr-4 pl-3 text-red-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent flex items-center" onClick={(e) => {
                         signOut(auth);
+                        localStorage.removeItem('accessToken');
                     }} title={`${user?.displayName}`}>
                         {
                             user?.photoURL && <img src={user?.photoURL} alt="dp" className='rounded-full w-8 mr-2 object-cover' />
