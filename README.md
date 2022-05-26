@@ -1,4 +1,4 @@
-# My site name
+# Hammer Power
 ## Important links:
 1. Client side private repo link [click here](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-hasibulislam999)
 2. Server side private repo link [click here](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-hasibulislam999)
