@@ -61,7 +61,6 @@ const Purchase = () => {
         };
         postUserOrder();
 
-        // console.log(userProduct);
         event.target.reset();
     };
 

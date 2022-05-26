@@ -33,7 +33,6 @@ const AddingReview = () => {
         };
         putUserReview();
 
-        // console.log(reviewerEmail, reviewerName, productName, reviewerSpeech, ratings);
         event.target.reset();
     };
 

@@ -1,16 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-// import { useQuery } from 'react-query';
 import PurchaseCard from '../../components/PurchaseCard';
 import Spinner from '../../shared/Spinner';
 
 const Tools = () => {
     const [spinner, setSpinner] = useState(true);
-
-    // const { data: products } = useQuery('products', () => fetch('http://localhost:5000/products').then(res => {
-    //     setSpinner(false);
-    //     return res.json()
-    // }))
 
     const [totalProductCount, setTotalProductCount] = useState(0);
     const [activePage, setActivePage] = useState(0);

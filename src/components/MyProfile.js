@@ -8,7 +8,7 @@ import ProfileUpdate from './ProfileUpdate';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
-    // console.log(user);
+    console.table(user);
     const navigate = useNavigate();
     return (
         <div>

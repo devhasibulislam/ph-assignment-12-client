@@ -7,9 +7,7 @@ const ManageOrders = () => {
     const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () => fetch("http://localhost:5000/userOrders").then(res => res.json()));
 
     const reduceAvailability = (totalQTY, availableQTY, id) => {
-        // console.log(totalQTY, availableQTY);
         const url = `http://localhost:5000/userOrder/${id}`;
-        // const toolAvailableQuantity = parseInt(availableQTY) - parseInt(totalQTY);
         const updateAvailability = async () => {
             const { data } = await axios.put(url, { toolAvailableQuantity: (parseInt(availableQTY) - parseInt(totalQTY)) });
             refetch();
