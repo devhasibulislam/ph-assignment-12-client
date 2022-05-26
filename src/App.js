@@ -23,6 +23,12 @@ import AllReview from './routes/Home/AllReview';
 import Payment from './routes/Dashboard/User/Payment';
 import AllProducts from './routes/Dashboard/User/AllProducts';
 import Welcome from './routes/Dashboard/Welcome';
+import Portfolio from './routes/Portfolio/Portfolio';
+import PortfolioHome from './routes/Portfolio/PortfolioHome';
+import AboutMe from './routes/Portfolio/AboutMe';
+import Education from './routes/Portfolio/Education';
+import Project from './routes/Portfolio/Project';
+import Technology from './routes/Portfolio/Technology';
 
 function App() {
   return (
@@ -139,6 +145,14 @@ function App() {
           path='*'
           element={<ErrorPage />}
         />
+        {/* portfolio */}
+        <Route path='/portfolio' element={<Portfolio />}>
+          <Route index element={<PortfolioHome />}></Route>
+          <Route path='aboutMe' element={<AboutMe />}></Route>
+          <Route path='education' element={<Education />}></Route>
+          <Route path='project' element={<Project />}></Route>
+          <Route path='technology' element={<Technology />}></Route>
+        </Route>
       </Routes>
       <ToastContainer />
     </div>

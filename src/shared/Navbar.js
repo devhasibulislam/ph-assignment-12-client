@@ -13,6 +13,7 @@ const Navbar = () => {
         {
             user && <li><CustomLink to={'/dashboard'}>Dashboard</CustomLink></li>
         }
+        <li><CustomLink to={'/portfolio'}>Portfolio</CustomLink></li>
         <li><CustomLink to={'/blog'}>Blog</CustomLink></li>
         <li>
             {
@@ -58,10 +59,17 @@ const Navbar = () => {
                         {menu}
                     </ul>
                 </div>
-                <div className="navbar-end lg:hidden">
-                    <label htmlFor="dashboard-drawer" tabIndex="1" className="btn btn-ghost lg:hidden">
-                        <i className="fa fa-tachometer text-xl" aria-hidden="true"></i>
-                    </label>
+                <div>
+                    <div className="navbar-end lg:hidden">
+                        <label htmlFor="dashboard-drawer" tabIndex="1" className="btn btn-ghost lg:hidden">
+                            <i className="fa fa-tachometer text-xl" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div className="navbar-end lg:hidden">
+                        <label htmlFor="portfolio-drawer" tabIndex="1" className="btn btn-ghost lg:hidden">
+                            <i className="fa fa-cogs" aria-hidden="true"></i>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
