@@ -19,6 +19,25 @@
 * Loading as preloader added
 * Whole site is dynamically responsive: mobile, table, PC
 * Simple JWT implemented for minimally images
+* Site contains:
+    * Home
+    * Dashboard
+        * User based
+            * My Order
+            * Add Review
+            * My Profile
+        * Admin based
+            * Add a product
+            * Make Admin
+            * Manage Orders
+            * Manage Products
+    * Portfolio
+        * About me
+        * About education
+        * Project
+        * Technology
+    * Blogs
+    * Login
 
 ## Technologies used here:
 * install and use firebase
