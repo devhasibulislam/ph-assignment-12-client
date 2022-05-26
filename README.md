@@ -13,6 +13,13 @@
     ```bash
     secretPassword123456
     ```
+## Features:
+* Allow sign in/sign up
+* get token from localStorage for manual login and social login
+* Loading as preloader added
+* Whole site is dynamically responsive: mobile, table, PC
+* Simple JWT implemented for minimally images
+
 ## Technologies used here:
 * install and use firebase
 ```bash
