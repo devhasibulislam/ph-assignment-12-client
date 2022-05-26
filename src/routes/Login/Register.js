@@ -41,7 +41,7 @@ const Register = () => {
 
     if (userEP || userG) {
         console.log(userEP || userG);
-        navigate('/');
+        navigate('/home');
     }
 
     const imageStorageKey = '104449008997c085d936fea4a24f3297';

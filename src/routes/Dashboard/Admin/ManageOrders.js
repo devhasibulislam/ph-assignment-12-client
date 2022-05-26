@@ -7,9 +7,12 @@ const ManageOrders = () => {
     const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () => fetch("http://localhost:5000/userOrders").then(res => res.json()));
 
     const reduceAvailability = (totalQTY, availableQTY, id) => {
+        const qty = {
+            toolAvailableQuantity: (parseInt(availableQTY) - parseInt(totalQTY))
+        };
         const url = `http://localhost:5000/userOrder/${id}`;
         const updateAvailability = async () => {
-            const { data } = await axios.put(url, { toolAvailableQuantity: (parseInt(availableQTY) - parseInt(totalQTY)) });
+            const { data } = await axios.put(url,qty);
             refetch();
             console.log(data);
         };
@@ -54,20 +57,6 @@ const ManageOrders = () => {
                                     <td> {userOrder?.quantity}</td>
                                     <td><span className='mr-1'>$</span>{userOrder?.totalPrize}</td>
                                     <td>
-                                        {/* {
-                                    !userOrder?.paid
-                                    &&
-                                    <label htmlFor="order-cancellation" className='btn btn-sm btn-outline btn-error mr-1' onClick={() => setCancelOrder(userOrder)}>Cancel</label>
-                                }
-                                {
-                                    (userOrder?.totalPrize && !userOrder?.paid)
-                                        ?
-                                        <button className='btn btn-sm btn-outline btn-success ml-1'
-                                            onClick={() => navigate(`/dashboard/payment/${userOrder?._id}`)}
-                                        >Payment</button>
-                                        :
-                                        <span className='text-success ml-4' title='wait for admins confirmation'>Paid</span>
-                                } */}
                                         {
                                             userOrder?.paid
                                                 ?
