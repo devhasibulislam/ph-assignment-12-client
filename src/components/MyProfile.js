@@ -14,7 +14,7 @@ const MyProfile = () => {
 
     useEffect(() => {
         const getProfile = async () => {
-            const url = `http://localhost:5000/myProfile/${user?.email}`;
+            const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/myProfile/${user?.email}`;
             const { data } = await axios.get(url);
             console.log(data);
             setProfile(data);
@@ -42,7 +42,7 @@ const MyProfile = () => {
         };
 
         const putMyProfileToDB = async () => {
-            const url = `http://localhost:5000/myProfile`;
+            const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/myProfile`;
             const { data } = await axios.post(url, profileInfo);
             console.log(data);
             window.location.reload();
@@ -54,7 +54,7 @@ const MyProfile = () => {
 
     return (
         <div>
-            <Title title={"My Profile"}/>
+            <Title title={"My Profile"} />
             <ParticleAnimation />
             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-1/2 md:w-1/2 w-full bg-slate-300'>
                 <div className="flex items-center justify-center">

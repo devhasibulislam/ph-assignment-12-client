@@ -35,7 +35,7 @@ const AddProduct = () => {
                 };
 
                 const postProductToDB = async () => {
-                    const url = `http://localhost:5000/product`;
+                    const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/product`;
                     const { data } = await axios.post(url, productInfo);
                     console.table(data);
                     toast.success('Product added successfully!')

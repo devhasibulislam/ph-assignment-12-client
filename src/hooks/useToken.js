@@ -13,7 +13,7 @@ const useToken = user => {
             avatar: avatar
         };
         if (email) {
-            fetch(`http://localhost:5000/userAdd/${email}`, {
+            fetch(`https://dashboard.heroku.com/apps/mighty-taiga-34747/userAdd/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

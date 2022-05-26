@@ -6,14 +6,14 @@ import Loading from '../../../shared/Loading';
 import Title from '../../../shared/Title';
 
 const ManageOrders = () => {
-    const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () => fetch("http://localhost:5000/userOrders").then(res => res.json()));
+    const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () => fetch("https://dashboard.heroku.com/apps/mighty-taiga-34747/userOrders").then(res => res.json()));
     const [disable, setDisable] = useState(false);
 
     const reduceAvailability = (totalQTY, availableQTY, id) => {
         const qty = {
             toolAvailableQuantity: (parseInt(availableQTY) - parseInt(totalQTY))
         };
-        const url = `http://localhost:5000/userOrder/${id}`;
+        const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/userOrder/${id}`;
         const updateAvailability = async () => {
             const { data } = await axios.put(url, qty);
             refetch();
@@ -27,7 +27,7 @@ const ManageOrders = () => {
             toolAvailableQuantity: availableQTY
         };
         const putUpdateQTY = async () => {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/product/${id}`;
             const { data } = await axios.put(url, qty);
             toast.success('qty updated!');
             console.log(data);

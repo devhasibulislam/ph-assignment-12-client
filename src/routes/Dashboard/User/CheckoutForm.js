@@ -14,7 +14,7 @@ const CheckoutForm = ({ userOrder }) => {
     const { _id, totalPrize, userName, userEmail } = userOrder;
 
     useEffect(() => {
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://dashboard.heroku.com/apps/mighty-taiga-34747/create-payment-intent", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ totalPrize }),
@@ -74,7 +74,7 @@ const CheckoutForm = ({ userOrder }) => {
                 transactionId: paymentIntent?.id
             };
 
-            fetch(`http://localhost:5000/userOrder/${_id}`, {
+            fetch(`https://dashboard.heroku.com/apps/mighty-taiga-34747/userOrder/${_id}`, {
                 method: "PATCH",
                 headers: {
                     "content-type": "application/json"

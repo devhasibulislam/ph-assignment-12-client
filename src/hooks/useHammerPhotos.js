@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const useHammerPhotos = () => {
     const [hammerPhotos, setHammerPhotos] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/hammerPhotos')
+        axios.get('https://dashboard.heroku.com/apps/mighty-taiga-34747/hammerPhotos')
             .then(res => setHammerPhotos(res?.data))
     }, []);
 

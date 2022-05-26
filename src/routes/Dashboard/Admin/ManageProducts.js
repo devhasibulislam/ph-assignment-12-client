@@ -6,12 +6,12 @@ import Loading from '../../../shared/Loading';
 import Title from '../../../shared/Title';
 
 const ManageProducts = () => {
-    const url = `http://localhost:5000/allProducts`;
+    const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/allProducts`;
     const { data: products, isLoading, refetch } = useQuery('products', () => fetch(url).then(res => res.json()));
 
     const handleDeleteProduct = (id) => {
         const deleteProduct = async () => {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/product/${id}`;
             const { data } = await axios.delete(url);
             toast.success('product deleted!');
             refetch();

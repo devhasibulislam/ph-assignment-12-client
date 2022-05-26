@@ -10,7 +10,7 @@ import OrderCancellation from './OrderCancellation';
 const MyOrders = () => {
     const [user] = useAuthState(auth);
     const [cancelOrder, setCancelOrder] = useState(null);
-    const { data: userOrders, isLoading, refetch } = useQuery("userOrders", () => fetch(`http://localhost:5000/userOrders?email=${user?.email}`).then(res => res.json()));
+    const { data: userOrders, isLoading, refetch } = useQuery("userOrders", () => fetch(`https://dashboard.heroku.com/apps/mighty-taiga-34747/userOrders?email=${user?.email}`).then(res => res.json()));
     const navigate = useNavigate();
 
     if (isLoading) {
@@ -19,7 +19,7 @@ const MyOrders = () => {
 
     return (
         <div>
-            <Title title={"My Order"}/>
+            <Title title={"My Order"} />
             <div className="overflow-x-auto">
                 {
                     userOrders?.length === 0

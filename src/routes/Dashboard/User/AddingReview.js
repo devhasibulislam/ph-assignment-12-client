@@ -26,7 +26,7 @@ const AddingReview = () => {
         };
 
         const putUserReview = async () => {
-            const url = `http://localhost:5000/review/${reviewerEmail}`;
+            const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/review/${reviewerEmail}`;
             const { data } = await axios.put(url, userReview);
             if (data?.acknowledged) {
                 toast.success('review setup done');

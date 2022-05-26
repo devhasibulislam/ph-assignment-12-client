@@ -11,7 +11,7 @@ const Tools = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/products?pageNumber=${activePage}`)
+        axios.get(`https://dashboard.heroku.com/apps/mighty-taiga-34747/products?pageNumber=${activePage}`)
             .then(res => {
                 setProducts(res?.data);
                 setSpinner(false);
@@ -19,7 +19,7 @@ const Tools = () => {
     }, [activePage]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/productCount')
+        axios.get('https://dashboard.heroku.com/apps/mighty-taiga-34747/productCount')
             .then(res => {
                 const overallNumbers = res?.data?.count;
                 const defaultCount = Math.ceil(overallNumbers / 3);

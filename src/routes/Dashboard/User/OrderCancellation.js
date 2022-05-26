@@ -4,7 +4,7 @@ import React from 'react';
 const OrderCancellation = ({ cancelOrder, setCancelOrder, refetch }) => {
     const handleOrderCancel = (id) => {
         const deleteUserOrder = async () => {
-            const url = `http://localhost:5000/userOrder/${id}`;
+            const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/userOrder/${id}`;
             const { data } = await axios.delete(url);
             console.log(data);
             refetch();
