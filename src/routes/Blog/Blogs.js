@@ -2,14 +2,24 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import Footer from '../../shared/Footer';
+import Loading from '../../shared/Loading';
 import Blog from './Blog';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true);
+    
     useEffect(() => {
         axios.get('http://localhost:5000/blogs')
-            .then(res => setBlogs(res?.data))
+            .then(res => {
+                setBlogs(res?.data);
+                setLoading(false);
+            })
     }, []);
+
+    if (loading) {
+        return <Loading />
+    }
     return (
         <div className='mt-20 lg:mb-0 mb-20'>
             <h1 className='text-center text-3xl'>Welcome to my
