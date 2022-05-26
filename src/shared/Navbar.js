@@ -48,8 +48,10 @@ const Navbar = () => {
                             {menu}
                         </ul>
                     </div>
-                    {/* <a href='/' className="btn btn-ghost normal-case text-xl">Assignment 12</a> */}
-                    <Link to={'/home'} className="btn btn-ghost normal-case text-xl">Assignment 12</Link>
+                    <Link to={'/home'} className="btn btn-ghost normal-case text-xl flex items-center">
+                        <i className="fa fa-superpowers mr-1 text-primary text-4xl" aria-hidden="true"></i>
+                        <span className='text-secondary'>Hammer Power</span>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
