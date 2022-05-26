@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../../shared/Loading';
+import Title from '../../../shared/Title';
 import OrderCancellation from './OrderCancellation';
 
 const MyOrders = () => {
@@ -18,6 +19,7 @@ const MyOrders = () => {
 
     return (
         <div>
+            <Title title={"My Order"}/>
             <div className="overflow-x-auto">
                 {
                     userOrders?.length === 0

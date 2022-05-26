@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
+import Title from '../shared/Title';
 import ParticleAnimation from './ParticleAnimation';
 
 const MyProfile = () => {
@@ -53,6 +54,7 @@ const MyProfile = () => {
 
     return (
         <div>
+            <Title title={"My Profile"}/>
             <ParticleAnimation />
             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-1/2 md:w-1/2 w-full bg-slate-300'>
                 <div className="flex items-center justify-center">

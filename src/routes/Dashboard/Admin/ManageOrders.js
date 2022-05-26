@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import Loading from '../../../shared/Loading';
+import Title from '../../../shared/Title';
 
 const ManageOrders = () => {
     const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () => fetch("http://localhost:5000/userOrders").then(res => res.json()));
@@ -41,6 +42,7 @@ const ManageOrders = () => {
 
     return (
         <div>
+            <Title title={'Manage Orders'} />
             {
                 manageOrders?.length === 0
                     ?

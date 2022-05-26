@@ -3,6 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Title from '../../../shared/Title';
 
 const AddProduct = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -45,6 +46,7 @@ const AddProduct = () => {
     };
     return (
         <div>
+            <Title title={'Adding Product'} />
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='text-center'>
 

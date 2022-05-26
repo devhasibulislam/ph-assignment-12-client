@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../../shared/Loading';
+import Title from '../../../shared/Title';
 
 const AddingReview = () => {
     const [user] = useAuthState(auth);
@@ -38,6 +39,7 @@ const AddingReview = () => {
 
     return (
         <div>
+            <Title title={"Adding Review"} />
             <form
                 className="card w-96 bg-base-100 shadow-xl mx-auto"
                 onSubmit={handleOrderedProduct}

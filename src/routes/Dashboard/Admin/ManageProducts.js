@@ -3,6 +3,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import Loading from '../../../shared/Loading';
+import Title from '../../../shared/Title';
 
 const ManageProducts = () => {
     const url = `http://localhost:5000/allProducts`;
@@ -25,6 +26,7 @@ const ManageProducts = () => {
 
     return (
         <div>
+            <Title title={'Manage Products'} />
             <table className="table w-full">
                 <thead>
                     <tr>

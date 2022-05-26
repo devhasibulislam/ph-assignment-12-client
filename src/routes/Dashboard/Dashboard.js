@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import CustomLink from '../../components/CustomLink';
 import auth from '../../firebase.init';
 import Loading from '../../shared/Loading';
+import Title from '../../shared/Title';
 
 const Dashboard = () => {
     const [user, loading] = useAuthState(auth);
@@ -18,6 +19,7 @@ const Dashboard = () => {
 
     return (
         <div className="drawer drawer-mobile">
+            <Title title={'Dashboard'} />
             <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content mt-4 pl-4">
                 {/* <!-- Page content here --> */}

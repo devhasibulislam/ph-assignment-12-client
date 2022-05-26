@@ -3,12 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import Footer from '../../shared/Footer';
 import Loading from '../../shared/Loading';
+import Title from '../../shared/Title';
 import Blog from './Blog';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
-    
+
     useEffect(() => {
         axios.get('http://localhost:5000/blogs')
             .then(res => {
@@ -22,6 +23,7 @@ const Blogs = () => {
     }
     return (
         <div className='mt-20 lg:mb-0 mb-20'>
+            <Title title={'Blog'} />
             <h1 className='text-center text-3xl'>Welcome to my
                 <span className='ml-1 text-green-600'>
                     <Typewriter

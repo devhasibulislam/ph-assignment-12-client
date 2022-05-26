@@ -3,6 +3,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import Loading from '../../../shared/Loading';
+import Title from '../../../shared/Title';
 
 const MakeAdmin = () => {
     const { data: makeUserAdmin, isLoading, refetch } = useQuery('makeAdmin', () => fetch('http://localhost:5000/users').then(res => res.json()));
@@ -24,6 +25,7 @@ const MakeAdmin = () => {
 
     return (
         <div>
+            <Title title={"Make Admin"} />
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
