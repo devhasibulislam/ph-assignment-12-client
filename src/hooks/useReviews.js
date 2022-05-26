@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const useReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        axios.get('https://dashboard.heroku.com/apps/mighty-taiga-34747/reviews')
+        axios.get('https://mighty-taiga-34747.herokuapp.com/reviews')
             .then(res => setReviews(res.data))
     }, []);
 

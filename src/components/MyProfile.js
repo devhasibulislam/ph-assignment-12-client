@@ -14,7 +14,7 @@ const MyProfile = () => {
 
     useEffect(() => {
         const getProfile = async () => {
-            const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/myProfile/${user?.email}`;
+            const url = `https://mighty-taiga-34747.herokuapp.com/myProfile/${user?.email}`;
             const { data } = await axios.get(url);
             console.log(data);
             setProfile(data);
@@ -42,7 +42,7 @@ const MyProfile = () => {
         };
 
         const putMyProfileToDB = async () => {
-            const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/myProfile`;
+            const url = `https://mighty-taiga-34747.herokuapp.com/myProfile`;
             const { data } = await axios.post(url, profileInfo);
             console.log(data);
             window.location.reload();

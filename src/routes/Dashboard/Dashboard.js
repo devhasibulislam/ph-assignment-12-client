@@ -10,7 +10,7 @@ import Title from '../../shared/Title';
 const Dashboard = () => {
     const [user, loading] = useAuthState(auth);
 
-    const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/user/${user?.email}`
+    const url = `https://mighty-taiga-34747.herokuapp.com/user/${user?.email}`
     const { data: findAdmin, isLoading } = useQuery('findAdmin', () => fetch(url).then(res => res.json()));
 
     if (loading || isLoading) {

@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L1UJyGRKrLWu7ojISpbxVO8rKxWSJ44p1Yt6
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `https://dashboard.heroku.com/apps/mighty-taiga-34747/userOrder/${id}`;
+    const url = `https://mighty-taiga-34747.herokuapp.com/userOrder/${id}`;
     const { data: userOrder, isLoading } = useQuery(['userOrder', id], () => fetch(url).then(res => res.json()));
 
     if (isLoading) {
