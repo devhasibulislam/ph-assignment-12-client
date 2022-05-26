@@ -2,31 +2,31 @@
     {
         "_id": 1,
         "question": "How will you improve the performance of a React Application?",
-        "answer": "pending"
+        "answer": "Keeping components state local where necessary. Memoizing React components to prevent unnecessary re-renders. Using dynamic import for code splitting like: hooks. Listing virtualization in react application. To load images using lazy loading to keep track displaying."
     },
     {
         "_id": 2,
         "question": "What are the different ways to manage a state in a React application?",
-        "answer": "pending"
+        "answer": "There are four main types of state to properly manage React apps. Firstly, Local State mostly indicate useState() hook. Secondly, Global State used to update data anywhere in our app. Thirdly, Server State means external server data integrate with our UI. Fourthly, URL state means those used data which exist in URL including path name and query parameter."
     },
     {
         "_id": 3,
         "question": "How does prototypical inheritance work?",
-        "answer": "pending"
+        "answer": "Prototypical inheritance means accessing object of another object. Using JavaScript prototype means adding new properties and methods to an existing object constructor. Even all JavaScript object inherit properties and methods from a prototype. When we read a property from object, and it's missing then JavaScript automatically takes it from the prototype. The prototype is only used for reading properties. Write/Delete operations work directly with the object."
     },
     {
         "_id": 4,
-        "question": "Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts",
-        "answer": "pending"
+        "question": "Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts?",
+        "answer": "Generally useState mutate an object where spread don't so with respect of this case we don't need that. Spread syntax can be used when all elements from an object or array need to be included in a list of some kind. useState() is a hook that lets function to a react feature. State generally refers to data or properties that need to be tracking in an application. In spread operator rest syntax is the opposite of spread syntax."
     },
     {
         "_id": 5,
         "question": "You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?",
-        "answer": "pending"
+        "answer": "First of all map() an array of product. Then approach includes() within that map. Within includes follow up the product name and results will be shown up. By the way there would be two state must one for searchQuery and another for filteredName. Both state contain empty string initially."
     },
     {
         "_id": 6,
         "question": "What is a unit test? Why should write unit tests?",
-        "answer": "pending"
+        "answer": "Unit testing is a method of testing the smallest pieces of code, typically individual functions in isolation. Used consistently, unit tests can cover a major part of our code and its workflows. Unit Testing allows developers to learn what functionality is provided by a unit and how to use it to gain a basic understanding of the unit API. Unit testing allows the programmer to refine code and make sure the module works properly."
     }
 ]

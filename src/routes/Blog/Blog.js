@@ -8,7 +8,7 @@ const Blog = ({ index, blog }) => {
                 <span className='text-green-600'>{index + 1}</span>. {question}
             </div>
             <div className="collapse-content">
-                <p>{answer}</p>
+                <p className='text-secondary'>{answer}</p>
             </div>
         </div>
     );

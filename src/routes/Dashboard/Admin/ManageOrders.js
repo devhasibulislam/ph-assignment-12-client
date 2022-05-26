@@ -1,11 +1,12 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import Loading from '../../../shared/Loading';
 
 const ManageOrders = () => {
     const { data: manageOrders, isLoading, refetch } = useQuery('manageOrders', () => fetch("http://localhost:5000/userOrders").then(res => res.json()));
+    const [disable, setDisable] = useState(false);
 
     const reduceAvailability = (totalQTY, availableQTY, id) => {
         const qty = {
@@ -29,6 +30,7 @@ const ManageOrders = () => {
             const { data } = await axios.put(url, qty);
             toast.success('qty updated!');
             console.log(data);
+            setDisable(true);
         };
         putUpdateQTY();
     };
@@ -79,6 +81,7 @@ const ManageOrders = () => {
                                                     <button
                                                         className='text-success btn btn-success btn-outline'
                                                         onClick={() => handleUpdateQTY(userOrder?.toolAvailableQuantity, userOrder?.productId)}
+                                                        disabled={disable}
                                                     >Click to confirm</button>
                                                     :
                                                     <button
