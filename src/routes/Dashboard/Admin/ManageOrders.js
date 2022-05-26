@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useQuery } from 'react-query';
+import { toast } from 'react-toastify';
 import Loading from '../../../shared/Loading';
 
 const ManageOrders = () => {
@@ -12,11 +13,24 @@ const ManageOrders = () => {
         };
         const url = `http://localhost:5000/userOrder/${id}`;
         const updateAvailability = async () => {
-            const { data } = await axios.put(url,qty);
+            const { data } = await axios.put(url, qty);
             refetch();
             console.log(data);
         };
         updateAvailability();
+    };
+
+    const handleUpdateQTY = (availableQTY, id) => {
+        const qty = {
+            toolAvailableQuantity: availableQTY
+        };
+        const putUpdateQTY = async () => {
+            const url = `http://localhost:5000/product/${id}`;
+            const { data } = await axios.put(url, qty);
+            toast.success('qty updated!');
+            console.log(data);
+        };
+        putUpdateQTY();
     };
 
     if (isLoading) {
@@ -62,7 +76,10 @@ const ManageOrders = () => {
                                                 ?
                                                 userOrder?.approval
                                                     ?
-                                                    <span className='text-success'>TYSM</span>
+                                                    <button
+                                                        className='text-success btn btn-success btn-outline'
+                                                        onClick={() => handleUpdateQTY(userOrder?.toolAvailableQuantity, userOrder?.productId)}
+                                                    >Click to confirm</button>
                                                     :
                                                     <button
                                                         className='btn btn-outline btn-success'

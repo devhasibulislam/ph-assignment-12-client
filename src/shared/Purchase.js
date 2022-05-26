@@ -35,10 +35,11 @@ const Purchase = () => {
     const handlePurchaseOrder = ({ prod }, event) => {
         event.preventDefault();
 
-        const { toolName, toolImage, toolDescription, toolOrderQuantity, toolAvailableQuantity, toolPrice } = prod;
+        const { toolName, toolImage, toolDescription, toolOrderQuantity, toolAvailableQuantity, toolPrice, _id } = prod;
 
         const totalPrize = toolPrice * validateQTY;
         const userProduct = {
+            productId: _id,
             userName: user?.displayName,
             userEmail: user?.email,
             toolName,
