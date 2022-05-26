@@ -1,9 +1,11 @@
 import React from 'react';
+import Title from '../../shared/Title';
 
 const AboutMe = () => {
    const resume = 'https://drive.google.com/file/d/1Gdbax82oaBWz2_0-OYh44E7QvfB53wNS/view';
    return (
       <div className='min-h-screen bg-zinc-800  w-full flex justify-center items-center'>
+         <Title title={'About me'}/>
          <div className='w-full'>
 
             <div className='flex justify-center'>

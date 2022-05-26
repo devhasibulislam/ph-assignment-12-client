@@ -1,8 +1,10 @@
 import React from 'react';
+import Title from '../../shared/Title';
 
 const Technology = () => {
     return (
         <div className=' flex p-8'>
+            <Title title={'Technology'}/>
             <div className='mr-4'>
                 {/* <!-- The button to open modal --> */}
                 <label for="front-end" class="btn modal-button btn-primary">Frontend</label>
