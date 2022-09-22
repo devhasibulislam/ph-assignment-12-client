@@ -12,7 +12,7 @@ const Purchase = () => {
     const [validateQTY, setValidateQTY] = useState(0);
     const [visibleBtn, setVisibleBtn] = useState(true);
 
-    const { data: product } = useQuery('product', () => fetch(`https://mighty-taiga-34747.herokuapp.com/product/${id}`).then(res => res.json()))
+    const { data: product } = useQuery('product', () => fetch(`http://localhost:5000/product/${id}`).then(res => res.json()))
 
     const checkValidQTY = (event) => {
         event.preventDefault();
@@ -53,7 +53,7 @@ const Purchase = () => {
         };
 
         const postUserOrder = async () => {
-            const url = `https://mighty-taiga-34747.herokuapp.com/userOrder`;
+            const url = `http://localhost:5000/userOrder`;
             const { data } = await axios.post(url, userProduct);
             if (data?.acknowledged) {
                 toast.success('Purchase order done!');

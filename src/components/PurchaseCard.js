@@ -7,7 +7,7 @@ const PurchaseCard = ({ product }) => {
         <div
             className="card card-side bg-base-100 shadow-xl"
         >
-            <figure><img src={product?.toolImage} alt="Hammer" className='w-40 max-w-full object-cover h-40 object-left-top' /></figure>
+            <figure className=''><img src={product?.toolImage} alt="Hammer" className='w-40 max-w-full object-cover h-40 object-left-top' /></figure>
             <div className="card-body">
                 <h2 className="card-title">{product?.toolName}</h2>
                 <p className='text-gray-400'>{product?.toolDescription}</p>

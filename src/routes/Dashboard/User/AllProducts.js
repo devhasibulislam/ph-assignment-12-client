@@ -9,7 +9,7 @@ const AllProducts = () => {
 
     useEffect(() => {
         const getProducts = async () => {
-            const url = `https://mighty-taiga-34747.herokuapp.com/allproducts`;
+            const url = `http://localhost:5000/allproducts`;
             const { data } = await axios.get(url);
             setProducts(data);
             console.log(data);

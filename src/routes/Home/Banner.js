@@ -14,9 +14,9 @@ const Banner = () => {
                     carousels?.map((carousel, index) => <div
                         key={carousel?._id}
                         id={`slide${index + 1}`}
-                        className="carousel-item relative w-full"
+                        className="carousel-item relative w-full justify-center"
                     >
-                        <img src={carousel?.sliderImage} alt='slider-carousel' className="w-full" />
+                        <img src={carousel?.sliderImage} alt='slider-carousel' className="max-w-full rounded" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href={`#slide${prev[index]}`} className="btn btn-circle">❮</a>
                             <a href={`#slide${next[index]}`} className="btn btn-circle">❯</a>

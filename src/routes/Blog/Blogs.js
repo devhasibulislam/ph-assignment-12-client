@@ -11,7 +11,7 @@ const Blogs = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('https://mighty-taiga-34747.herokuapp.com/blogs')
+        axios.get('http://localhost:5000/blogs')
             .then(res => {
                 setBlogs(res?.data);
                 setLoading(false);

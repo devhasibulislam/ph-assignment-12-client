@@ -6,10 +6,10 @@ import Loading from '../../../shared/Loading';
 import Title from '../../../shared/Title';
 
 const MakeAdmin = () => {
-    const { data: makeUserAdmin, isLoading, refetch } = useQuery('makeAdmin', () => fetch('https://mighty-taiga-34747.herokuapp.com/users').then(res => res.json()));
+    const { data: makeUserAdmin, isLoading, refetch } = useQuery('makeAdmin', () => fetch('http://localhost:5000/users').then(res => res.json()));
 
     const makeAnUserAdmin = (id) => {
-        const url = `https://mighty-taiga-34747.herokuapp.com/user/${id}`;
+        const url = `http://localhost:5000/user/${id}`;
         const putAdmin = async () => {
             const { data } = await axios.put(url);
             refetch();

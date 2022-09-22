@@ -72,7 +72,7 @@ const Register = () => {
                 };
 
                 // store in our db
-                const urlUsr = `https://mighty-taiga-34747.herokuapp.com/userAdd/${email}`;
+                const urlUsr = `http://localhost:5000/userAdd/${email}`;
                 const postUser = async () => {
                     const request = await fetch(urlUsr, {
                         method: "PUT",

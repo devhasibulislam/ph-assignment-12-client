@@ -7,7 +7,7 @@ const ReviewCard = ({ review }) => {
             className="card bg-base-100 shadow-xl"
         >
             <figure className="px-10 pt-10 relative">
-                <img src={review?.reviewerAvatar} alt="reviewer" className="rounded-xl h-[426px] object-cover object-top" />
+                <img src={review?.reviewerAvatar} alt="reviewer" className="rounded-xl object-cover object-top max-w-full" />
                 <span className='absolute top-8 left-4 bg-secondary text-white rounded-xl px-4'>{review?.reviewerEmail}</span>
             </figure>
             <div className="card-body items-start text-justify">

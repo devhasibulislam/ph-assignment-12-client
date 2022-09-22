@@ -10,7 +10,7 @@ import OrderCancellation from './OrderCancellation';
 const MyOrders = () => {
     const [user] = useAuthState(auth);
     const [cancelOrder, setCancelOrder] = useState(null);
-    const { data: userOrders, isLoading, refetch } = useQuery("userOrders", () => fetch(`https://mighty-taiga-34747.herokuapp.com/userOrders?email=${user?.email}`).then(res => res.json()));
+    const { data: userOrders, isLoading, refetch } = useQuery("userOrders", () => fetch(`http://localhost:5000/userOrders?email=${user?.email}`).then(res => res.json()));
     const navigate = useNavigate();
 
     if (isLoading) {
