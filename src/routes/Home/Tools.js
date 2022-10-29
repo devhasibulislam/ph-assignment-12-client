@@ -11,7 +11,7 @@ const Tools = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/products?pageNumber=${activePage}`)
+        axios.get(`https://manufacturer-website-mw-server.onrender.com/products?pageNumber=${activePage}`)
             .then(res => {
                 setProducts(res?.data);
                 setSpinner(false);
@@ -19,10 +19,10 @@ const Tools = () => {
     }, [activePage]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/productCount')
+        axios.get('https://manufacturer-website-mw-server.onrender.com/productCount')
             .then(res => {
                 const overallNumbers = res?.data?.count;
-                const defaultCount = Math.ceil(overallNumbers / 3);
+                const defaultCount = Math.ceil(overallNumbers / 10);
                 setTotalProductCount(defaultCount);
             })
     }, []);

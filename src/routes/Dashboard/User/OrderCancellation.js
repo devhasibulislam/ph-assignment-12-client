@@ -4,7 +4,7 @@ import React from 'react';
 const OrderCancellation = ({ cancelOrder, setCancelOrder, refetch }) => {
     const handleOrderCancel = (id) => {
         const deleteUserOrder = async () => {
-            const url = `http://localhost:5000/userOrder/${id}`;
+            const url = `https://manufacturer-website-mw-server.onrender.com/userOrder/${id}`;
             const { data } = await axios.delete(url);
             console.log(data);
             refetch();

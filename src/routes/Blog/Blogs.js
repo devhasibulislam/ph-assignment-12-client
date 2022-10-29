@@ -11,7 +11,7 @@ const Blogs = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/blogs')
+        axios.get('https://manufacturer-website-mw-server.onrender.com/blogs')
             .then(res => {
                 setBlogs(res?.data);
                 setLoading(false);

@@ -13,7 +13,7 @@ const useToken = user => {
             avatar: avatar
         };
         if (email) {
-            fetch(`http://localhost:5000/userAdd/${email}`, {
+            fetch(`https://manufacturer-website-mw-server.onrender.com/userAdd/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

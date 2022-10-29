@@ -9,7 +9,7 @@ const AllProducts = () => {
 
     useEffect(() => {
         const getProducts = async () => {
-            const url = `http://localhost:5000/allproducts`;
+            const url = `https://manufacturer-website-mw-server.onrender.com/allproducts`;
             const { data } = await axios.get(url);
             setProducts(data);
             console.log(data);

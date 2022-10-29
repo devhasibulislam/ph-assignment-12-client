@@ -72,7 +72,7 @@ const Register = () => {
                 };
 
                 // store in our db
-                const urlUsr = `http://localhost:5000/userAdd/${email}`;
+                const urlUsr = `https://manufacturer-website-mw-server.onrender.com/userAdd/${email}`;
                 const postUser = async () => {
                     const request = await fetch(urlUsr, {
                         method: "PUT",
